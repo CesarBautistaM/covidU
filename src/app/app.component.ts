@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { GlobalDataService } from './service/global-data.service';
 
@@ -18,20 +19,38 @@ export class AppComponent {
   municipioData: any;
   dataMunicipio: any;
   basicDataMun: any;
+  municipios: any;
+  selectedMunicipio = this.fb.control([]);
+  dayData: any;
 
-  constructor(private globalDataService: GlobalDataService) {
+  constructor(private globalDataService: GlobalDataService, private fb: FormBuilder) {
 
   }
 
   ngOnInit() {
     this.getGlobalData();
-    this.getMunicipio()
+
+    this.globalDataService.getMunicipios().subscribe(res => {
+      //this.municipios = res.map((x: any) => { return { codigo: x['c_digo_dane_del_municipio'], name: x.municipio } })
+      this.municipios = res.map((x: any) => { return { codigo: x['c_digo_dane_del_municipio'], name: x.municipio } })
+      this.selectedMunicipio.patchValue(this.municipios[0].codigo)
+    })
+
+    this.selectedMunicipio.valueChanges.subscribe(res => {
+      this.getMunicipio(res)
+    })
 
   }
 
   private getGlobalData() {
     this.globalDataService.getInfo().subscribe((data: any) => {
       console.log(data);
+      this.dayData = {
+        confirmados: data.Global.NewConfirmed,
+        muertos: data.Global.NewDeaths,
+        recuperados: data.Global.NewRecovered
+      }
+      console.log(this.dayData)
       this.basicData = {
         labels: ['Global'],
         datasets: [
@@ -73,8 +92,8 @@ export class AppComponent {
     })
   }
 
-  getMunicipio() {
-    this.globalDataService.getSpecific('05002').subscribe((data: any) => {
+  getMunicipio(codigo: string) {
+    this.globalDataService.getSpecific(codigo).subscribe((data: any) => {
       var fechas: any = [];
       var casos: any = [];
       var fallecidos: any = [];
