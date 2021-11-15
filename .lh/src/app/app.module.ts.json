@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/app.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1636998003405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1636998110051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n import { AppRoutingModule } from './app-routing.module';\n import { AppComponent } from './app.component';\n import { BreadcrumbModule } from 'primeng/breadcrumb';\n+import { MenuItem } from 'primeng/api';\n \n @NgModule({\n   declarations: [\n     AppComponent\n@@ -16,5 +17,22 @@\n   ],\n   providers: [],\n   bootstrap: [AppComponent]\n })\n-export class AppModule { }\n+export class AppModule {\n+\n+  private items!: MenuItem[];\n+\n+  ngOnInit() {\n+    this.items = [\n+      { label: 'Categories' },\n+      { label: 'Sports' },\n+      { label: 'Football' },\n+      { label: 'Countries' },\n+      { label: 'Spain' },\n+      { label: 'F.C. Barcelona' },\n+      { label: 'Squad' },\n+      { label: 'Lionel Messi', url: 'https://en.wikipedia.org/wiki/Lionel_Messi' }\n+    ];\n+  }\n+\n+}\n"
+                },
+                {
+                    "date": 1636998149624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,36 +3,18 @@\n \n import { AppRoutingModule } from './app-routing.module';\n import { AppComponent } from './app.component';\n import { BreadcrumbModule } from 'primeng/breadcrumb';\n-import { MenuItem } from 'primeng/api';\n \n @NgModule({\n   declarations: [\n     AppComponent\n   ],\n   imports: [\n     BrowserModule,\n     AppRoutingModule,\n-    BreadcrumbModule,\n+    BreadcrumbModule\n   ],\n   providers: [],\n   bootstrap: [AppComponent]\n })\n-export class AppModule {\n-\n-  private items!: MenuItem[];\n-\n-  ngOnInit() {\n-    this.items = [\n-      { label: 'Categories' },\n-      { label: 'Sports' },\n-      { label: 'Football' },\n-      { label: 'Countries' },\n-      { label: 'Spain' },\n-      { label: 'F.C. Barcelona' },\n-      { label: 'Squad' },\n-      { label: 'Lionel Messi', url: 'https://en.wikipedia.org/wiki/Lionel_Messi' }\n-    ];\n-  }\n-\n-}\n+export class AppModule { }\n"
+                },
+                {
+                    "date": 1637000198036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,17 +3,19 @@\n \n import { AppRoutingModule } from './app-routing.module';\n import { AppComponent } from './app.component';\n import { BreadcrumbModule } from 'primeng/breadcrumb';\n+import { ChartModule } from 'primeng/chart';\n \n @NgModule({\n   declarations: [\n     AppComponent\n   ],\n   imports: [\n     BrowserModule,\n     AppRoutingModule,\n-    BreadcrumbModule\n+    BreadcrumbModule,\n+    ChartModule\n   ],\n   providers: [],\n   bootstrap: [AppComponent]\n })\n"
+                },
+                {
+                    "date": 1637000399869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import { AppRoutingModule } from './app-routing.module';\n import { AppComponent } from './app.component';\n import { BreadcrumbModule } from 'primeng/breadcrumb';\n import { ChartModule } from 'primeng/chart';\n+import { SplitterModule } from 'primeng/splitter';\n \n @NgModule({\n   declarations: [\n     AppComponent\n@@ -13,9 +14,10 @@\n   imports: [\n     BrowserModule,\n     AppRoutingModule,\n     BreadcrumbModule,\n-    ChartModule\n+    ChartModule,\n+    SplitterModule\n   ],\n   providers: [],\n   bootstrap: [AppComponent]\n })\n"
+                },
+                {
+                    "date": 1637000967984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { AppComponent } from './app.component';\n import { BreadcrumbModule } from 'primeng/breadcrumb';\n import { ChartModule } from 'primeng/chart';\n import { SplitterModule } from 'primeng/splitter';\n+import { HttpClientModule } from '@angular/common/http';\n \n @NgModule({\n   declarations: [\n     AppComponent\n@@ -15,9 +16,10 @@\n     BrowserModule,\n     AppRoutingModule,\n     BreadcrumbModule,\n     ChartModule,\n-    SplitterModule\n+    SplitterModule,\n+    HttpClientModule\n   ],\n   providers: [],\n   bootstrap: [AppComponent]\n })\n"
+                }
+            ],
+            "date": 1636998003405,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BreadcrumbModule } from 'primeng/breadcrumb';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BreadcrumbModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n"
+        }
+    ]
+}

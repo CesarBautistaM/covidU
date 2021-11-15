@@ -1,0 +1,18 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1636997763792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1636997763792,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"covid-u\",\n  \"version\": \"0.0.0\",\n  \"scripts\": {\n    \"ng\": \"ng\",\n    \"start\": \"ng serve\",\n    \"build\": \"ng build\",\n    \"watch\": \"ng build --watch --configuration development\",\n    \"test\": \"ng test\"\n  },\n  \"private\": true,\n  \"dependencies\": {\n    \"@angular/animations\": \"~12.0.0\",\n    \"@angular/common\": \"~12.0.0\",\n    \"@angular/compiler\": \"~12.0.0\",\n    \"@angular/core\": \"~12.0.0\",\n    \"@angular/forms\": \"~12.0.0\",\n    \"@angular/platform-browser\": \"~12.0.0\",\n    \"@angular/platform-browser-dynamic\": \"~12.0.0\",\n    \"@angular/router\": \"~12.0.0\",\n    \"primeicons\": \"^5.0.0\",\n    \"primeng\": \"^13.0.0-rc.2\",\n    \"rxjs\": \"~6.6.0\",\n    \"tslib\": \"^2.1.0\",\n    \"zone.js\": \"~0.11.4\"\n  },\n  \"devDependencies\": {\n    \"@angular-devkit/build-angular\": \"~12.0.0\",\n    \"@angular/cli\": \"~12.0.0\",\n    \"@angular/compiler-cli\": \"~12.0.0\",\n    \"@types/jasmine\": \"~3.6.0\",\n    \"@types/node\": \"^12.11.1\",\n    \"jasmine-core\": \"~3.7.0\",\n    \"karma\": \"~6.3.0\",\n    \"karma-chrome-launcher\": \"~3.1.0\",\n    \"karma-coverage\": \"~2.0.3\",\n    \"karma-jasmine\": \"~4.0.0\",\n    \"karma-jasmine-html-reporter\": \"^1.5.0\",\n    \"typescript\": \"~4.2.3\"\n  }\n}"
+        }
+    ]
+}

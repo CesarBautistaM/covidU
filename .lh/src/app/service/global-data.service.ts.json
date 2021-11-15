@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/service/global-data.service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1637000953493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1637001002992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import { Injectable } from '@angular/core';\n+import { HttpClient } from '@angular/common/http';\n \n @Injectable({\n   providedIn: 'root'\n })\n export class GlobalDataService {\n \n   private URL: string = 'https://api.covid19api.com/';\n \n-  constructor() { }\n+  constructor(private http: HttpClient) { }\n \n   getInfo() {\n     return this.http.get<any>(this.URL);\n   }\n"
+                },
+                {
+                    "date": 1637001169400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   providedIn: 'root'\n })\n export class GlobalDataService {\n \n-  private URL: string = 'https://api.covid19api.com/';\n+  private URL: string = 'https://api.covid19api.com/summary';\n \n   constructor(private http: HttpClient) { }\n \n   getInfo() {\n"
+                },
+                {
+                    "date": 1637002534672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,16 @@\n })\n export class GlobalDataService {\n \n   private URL: string = 'https://api.covid19api.com/summary';\n+  private URLL: string = \"https://www.datos.gov.co/resource/gt2j-8ykr.json?$group=ciudad_municipio, fecha_diagnostico&$select=fecha_diagnostico, ciudad_municipio,COUNT(*) as casos, SUM(CASE(recuperado LIKE '%25allecido%25', 1, true, 0)) AS fallecidos, SUM(CASE(recuperado LIKE '%25ecuperado%25', 1, true, 0)) AS recuperados, SUM(CASE(recuperado LIKE '%25ctivo%25', 1, true, 0)) AS activos, SUM(CASE(recuperado LIKE '%25N/A%25', 1, true, 0)) AS na&ciudad_municipio=\";\n \n   constructor(private http: HttpClient) { }\n \n   getInfo() {\n     return this.http.get<any>(this.URL);\n   }\n+\n+  getSpecific(municipio: string) {\n+    return this.http.get<any>(this.URL);\n+  }\n }\n"
+                },
+                {
+                    "date": 1637002550949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,7 @@\n     return this.http.get<any>(this.URL);\n   }\n \n   getSpecific(municipio: string) {\n-    return this.http.get<any>(this.URL);\n+    return this.http.get<any>(this.URLL + municipio);\n   }\n }\n"
+                },
+                {
+                    "date": 1637003765765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n export class GlobalDataService {\n \n   private URL: string = 'https://api.covid19api.com/summary';\n   private URLL: string = \"https://www.datos.gov.co/resource/gt2j-8ykr.json?$group=ciudad_municipio, fecha_diagnostico&$select=fecha_diagnostico, ciudad_municipio,COUNT(*) as casos, SUM(CASE(recuperado LIKE '%25allecido%25', 1, true, 0)) AS fallecidos, SUM(CASE(recuperado LIKE '%25ecuperado%25', 1, true, 0)) AS recuperados, SUM(CASE(recuperado LIKE '%25ctivo%25', 1, true, 0)) AS activos, SUM(CASE(recuperado LIKE '%25N/A%25', 1, true, 0)) AS na&ciudad_municipio=\";\n-\n+  private URLMUNICIPIOSLIST: string = \"https://www.datos.gov.co/resource/xdk5-pm3f.json\"\n   constructor(private http: HttpClient) { }\n \n   getInfo() {\n     return this.http.get<any>(this.URL);\n@@ -17,5 +17,10 @@\n \n   getSpecific(municipio: string) {\n     return this.http.get<any>(this.URLL + municipio);\n   }\n+\n+  getMunicipios() {\n+    return this.http.get<any>(this.URLMUNICIPIOSLIST);\n+  }\n+\n }\n"
+                }
+            ],
+            "date": 1637000953493,
+            "name": "Commit-0",
+            "content": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class GlobalDataService {\n\n  private URL: string = 'https://api.covid19api.com/';\n\n  constructor() { }\n\n  getInfo() {\n    return this.http.get<any>(this.URL);\n  }\n}\n"
+        }
+    ]
+}

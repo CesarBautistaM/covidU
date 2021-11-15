@@ -1,0 +1,166 @@
+{
+    "sourceFile": "src/app/app.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 37,
+            "patches": [
+                {
+                    "date": 1636997832292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1636998060699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+<p-breadcrumb [model]=\"items\"></p-breadcrumb>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1636998157651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +0,0 @@\n-<p-breadcrumb [model]=\"items\"></p-breadcrumb>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1636998184791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+<p-breadcrumb [model]=\"items\"></p-breadcrumb>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1636998269560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-<p-breadcrumb [model]=\"items\"></p-breadcrumb>\n\\ No newline at end of file\n+<p-breadcrumb [model]=\"items\"></p-breadcrumb>\n+<link rel=\"stylesheet\" type=\"text/css\" href=\"/node_modules/primeng/resources/themes/omega/theme.css\" />\n+<link rel=\"stylesheet\" type=\"text/css\" href=\"/node_modules/primeng/resources/primeng.min.css\" />\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1636998308179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,1 @@\n-<p-breadcrumb [model]=\"items\"></p-breadcrumb>\n-<link rel=\"stylesheet\" type=\"text/css\" href=\"/node_modules/primeng/resources/themes/omega/theme.css\" />\n-<link rel=\"stylesheet\" type=\"text/css\" href=\"/node_modules/primeng/resources/primeng.min.css\" />\n\\ No newline at end of file\n+<p-breadcrumb [model]=\"items\"></p-breadcrumb>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1636999657590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,68 @@\n-<p-breadcrumb [model]=\"items\"></p-breadcrumb>\n\\ No newline at end of file\n+<div class=\"surface-ground px-4 py-5 md:px-6 lg:px-8\">\r\n+    <div class=\"grid\">\r\n+        <div class=\"col-12 md:col-6 lg:col-3\">\r\n+            <div class=\"surface-card shadow-2 p-3 border-round\">\r\n+                <div class=\"flex justify-content-between mb-3\">\r\n+                    <div>\r\n+                        <span class=\"block text-500 font-medium mb-3\">Orders</span>\r\n+                        <div class=\"text-900 font-medium text-xl\">152</div>\r\n+                    </div>\r\n+                    <div class=\"flex align-items-center justify-content-center bg-blue-100 border-round\"\r\n+                        style=\"width:2.5rem;height:2.5rem\">\r\n+                        <i class=\"pi pi-shopping-cart text-blue-500 text-xl\"></i>\r\n+                    </div>\r\n+                </div>\r\n+                <span class=\"text-green-500 font-medium\">24 new </span>\r\n+                <span class=\"text-500\">since last visit</span>\r\n+            </div>\r\n+        </div>\r\n+        <div class=\"col-12 md:col-6 lg:col-3\">\r\n+            <div class=\"surface-card shadow-2 p-3 border-round\">\r\n+                <div class=\"flex justify-content-between mb-3\">\r\n+                    <div>\r\n+                        <span class=\"block text-500 font-medium mb-3\">Revenue</span>\r\n+                        <div class=\"text-900 font-medium text-xl\">$2.100</div>\r\n+                    </div>\r\n+                    <div class=\"flex align-items-center justify-content-center bg-orange-100 border-round\"\r\n+                        style=\"width:2.5rem;height:2.5rem\">\r\n+                        <i class=\"pi pi-map-marker text-orange-500 text-xl\"></i>\r\n+                    </div>\r\n+                </div>\r\n+                <span class=\"text-green-500 font-medium\">%52+ </span>\r\n+                <span class=\"text-500\">since last week</span>\r\n+            </div>\r\n+        </div>\r\n+        <div class=\"col-12 md:col-6 lg:col-3\">\r\n+            <div class=\"surface-card shadow-2 p-3 border-round\">\r\n+                <div class=\"flex justify-content-between mb-3\">\r\n+                    <div>\r\n+                        <span class=\"block text-500 font-medium mb-3\">Customers</span>\r\n+                        <div class=\"text-900 font-medium text-xl\">28441</div>\r\n+                    </div>\r\n+                    <div class=\"flex align-items-center justify-content-center bg-cyan-100 border-round\"\r\n+                        style=\"width:2.5rem;height:2.5rem\">\r\n+                        <i class=\"pi pi-inbox text-cyan-500 text-xl\"></i>\r\n+                    </div>\r\n+                </div>\r\n+                <span class=\"text-green-500 font-medium\">520 </span>\r\n+                <span class=\"text-500\">newly registered</span>\r\n+            </div>\r\n+        </div>\r\n+        <div class=\"col-12 md:col-6 lg:col-3\">\r\n+            <div class=\"surface-card shadow-2 p-3 border-round\">\r\n+                <div class=\"flex justify-content-between mb-3\">\r\n+                    <div>\r\n+                        <span class=\"block text-500 font-medium mb-3\">Comments</span>\r\n+                        <div class=\"text-900 font-medium text-xl\">152 Unread</div>\r\n+                    </div>\r\n+                    <div class=\"flex align-items-center justify-content-center bg-purple-100 border-round\"\r\n+                        style=\"width:2.5rem;height:2.5rem\">\r\n+                        <i class=\"pi pi-comment text-purple-500 text-xl\"></i>\r\n+                    </div>\r\n+                </div>\r\n+                <span class=\"text-green-500 font-medium\">85 </span>\r\n+                <span class=\"text-500\">responded</span>\r\n+            </div>\r\n+        </div>\r\n+    </div>\r\n+</div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637000213486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,5 +64,7 @@\n                 <span class=\"text-500\">responded</span>\r\n             </div>\r\n         </div>\r\n     </div>\r\n-</div>\n\\ No newline at end of file\n+</div>\r\n+\r\n+<p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637000402972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,6 +65,12 @@\n             </div>\r\n         </div>\r\n     </div>\r\n </div>\r\n-\r\n-<p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\n\\ No newline at end of file\n+<p-splitter [style]=\"{'height': '300px'}\">\r\n+    <ng-template pTemplate>\r\n+        <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\r\n+    </ng-template>\r\n+    <ng-template pTemplate>\r\n+        Panel 2\r\n+    </ng-template>\r\n+</p-splitter>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637000458598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,12 +65,11 @@\n             </div>\r\n         </div>\r\n     </div>\r\n </div>\r\n-<p-splitter [style]=\"{'height': '300px'}\">\r\n-    <ng-template pTemplate>\r\n+<div class=\"p-grid\">\r\n+    <div class=\"p-col\">1</div>\r\n+    <div class=\"p-col\">\r\n         <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\r\n-    </ng-template>\r\n-    <ng-template pTemplate>\r\n\\ No newline at end of file\n-        Panel 2\r\n-    </ng-template>\r\n-</p-splitter>\n+    </div>\r\n+    <div class=\"p-col\">3</div>\r\n+</div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637000526308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,11 +65,8 @@\n             </div>\r\n         </div>\r\n     </div>\r\n </div>\r\n-<div class=\"p-grid\">\r\n-    <div class=\"p-col\">1</div>\r\n-    <div class=\"p-col\">\r\n-        <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\r\n-    </div>\r\n-    <div class=\"p-col\">3</div>\r\n+<div class=\"container\">\r\n+    <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\r\n+\r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637001494636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,7 +66,14 @@\n         </div>\r\n     </div>\r\n </div>\r\n <div class=\"container\">\r\n-    <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\r\n+    <div class=\"p-grid\">\r\n+        <div class=\"p-col\">\r\n+            <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\r\n+        </div>\r\n+        <div class=\"p-col\">\r\n+            <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\r\n+        </div>\r\n+    </div>\r\n \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637001577204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,14 +66,24 @@\n         </div>\r\n     </div>\r\n </div>\r\n <div class=\"container\">\r\n-    <div class=\"p-grid\">\r\n-        <div class=\"p-col\">\r\n-            <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\r\n-        </div>\r\n-        <div class=\"p-col\">\r\n-            <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\"></p-chart>\r\n-        </div>\r\n-    </div>\r\n+    <table>\r\n+        <tr>\r\n+            <td>\r\n+                <div class=\"p-col\">\r\n+                    <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n+                    </p-chart>\r\n+                </div>\r\n+            </td>\r\n+        </tr>\r\n+        <tr>\r\n+            <td>\r\n+                <div class=\"p-col\">\r\n+                    <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n+                    </p-chart>\r\n+                </div>\r\n+            </td>\r\n+        </tr>\r\n+    </table>\r\n \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637001595322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,10 +74,8 @@\n                     <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n                     </p-chart>\r\n                 </div>\r\n             </td>\r\n-        </tr>\r\n-        <tr>\r\n             <td>\r\n                 <div class=\"p-col\">\r\n                     <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n                     </p-chart>\r\n"
+                },
+                {
+                    "date": 1637001609300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         </div>\r\n     </div>\r\n </div>\r\n <div class=\"container\">\r\n-    <table>\r\n+    <table border=\"1\">\r\n         <tr>\r\n             <td>\r\n                 <div class=\"p-col\">\r\n                     <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n"
+                },
+                {
+                    "date": 1637001643793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         </div>\r\n     </div>\r\n </div>\r\n <div class=\"container\">\r\n-    <table border=\"1\">\r\n+    <table border=\"1\" [width]=\"100%\">\r\n         <tr>\r\n             <td>\r\n                 <div class=\"p-col\">\r\n                     <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n"
+                },
+                {
+                    "date": 1637001652652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         </div>\r\n     </div>\r\n </div>\r\n <div class=\"container\">\r\n-    <table border=\"1\" [width]=\"100%\">\r\n+    <table border=\"1\" [width]=\"'100%'\">\r\n         <tr>\r\n             <td>\r\n                 <div class=\"p-col\">\r\n                     <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n"
+                },
+                {
+                    "date": 1637001711027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n             </div>\r\n         </div>\r\n     </div>\r\n </div>\r\n-<div class=\"container\">\r\n+<div class=\"\">\r\n     <table border=\"1\" [width]=\"'100%'\">\r\n         <tr>\r\n             <td>\r\n                 <div class=\"p-col\">\r\n"
+                },
+                {
+                    "date": 1637001737482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n             </div>\r\n         </div>\r\n     </div>\r\n </div>\r\n-<div class=\"\">\r\n+<div class=\"container\">\r\n     <table border=\"1\" [width]=\"'100%'\">\r\n         <tr>\r\n             <td>\r\n                 <div class=\"p-col\">\r\n"
+                },
+                {
+                    "date": 1637001795872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         </div>\r\n     </div>\r\n </div>\r\n <div class=\"container\">\r\n-    <table border=\"1\" [width]=\"'100%'\">\r\n+    <table>\r\n         <tr>\r\n             <td>\r\n                 <div class=\"p-col\">\r\n                     <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n"
+                },
+                {
+                    "date": 1637001854122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,10 +76,9 @@\n                 </div>\r\n             </td>\r\n             <td>\r\n                 <div class=\"p-col\">\r\n-                    <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n-                    </p-chart>\r\n+\r\n                 </div>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n"
+                },
+                {
+                    "date": 1637001870627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,17 +69,13 @@\n <div class=\"container\">\r\n     <table>\r\n         <tr>\r\n             <td>\r\n-                <div class=\"p-col\">\r\n-                    <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n-                    </p-chart>\r\n-                </div>\r\n+                <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n+                </p-chart>\r\n             </td>\r\n             <td>\r\n-                <div class=\"p-col\">\r\n \r\n-                </div>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n \r\n"
+                },
+                {
+                    "date": 1637002007153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,8 +69,10 @@\n <div class=\"container\">\r\n     <table>\r\n         <tr>\r\n             <td>\r\n+                <h5>Basic</h5>\r\n+\r\n                 <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n                 </p-chart>\r\n             </td>\r\n             <td>\r\n"
+                },
+                {
+                    "date": 1637002016281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n <div class=\"container\">\r\n     <table>\r\n         <tr>\r\n             <td>\r\n-                <h5>Basic</h5>\r\n+                <h1>Basic</h1>\r\n \r\n                 <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n                 </p-chart>\r\n             </td>\r\n"
+                },
+                {
+                    "date": 1637002027131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,13 +66,13 @@\n         </div>\r\n     </div>\r\n </div>\r\n <div class=\"container\">\r\n+    <h1>Basic</h1>\r\n+\r\n     <table>\r\n         <tr>\r\n             <td>\r\n-                <h1>Basic</h1>\r\n-\r\n                 <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n                 </p-chart>\r\n             </td>\r\n             <td>\r\n"
+                },
+                {
+                    "date": 1637002058607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n         </div>\r\n     </div>\r\n </div>\r\n <div class=\"container\">\r\n-    <h1>Basic</h1>\r\n+    <h1>Total Globales</h1>\r\n \r\n     <table>\r\n         <tr>\r\n             <td>\r\n"
+                },
+                {
+                    "date": 1637002137071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n                 <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n                 </p-chart>\r\n             </td>\r\n             <td>\r\n-\r\n+                <p-chart type=\"line\" [data]=\"basicData\" [options]=\"basicOptions\"></p-chart>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n \r\n"
+                },
+                {
+                    "date": 1637002246215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n                 <p-chart type=\"doughnut\" [data]=\"data\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n                 </p-chart>\r\n             </td>\r\n             <td>\r\n-                <p-chart type=\"line\" [data]=\"basicData\" [options]=\"basicOptions\"></p-chart>\r\n+                <p-chart type=\"bar\" [data]=\"basicData\" [options]=\"basicOptions\"></p-chart>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n \r\n"
+                },
+                {
+                    "date": 1637002679334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,5 +80,18 @@\n             </td>\r\n         </tr>\r\n     </table>\r\n \r\n+</div>\r\n+\r\n+<div class=\"container\">\r\n+    <h1>Diarios Municipio</h1>\r\n+\r\n+    <table>\r\n+        <tr>\r\n+            <td>\r\n+                <p-chart type=\"bar\" [data]=\"basicData\" [options]=\"basicOptions\"></p-chart>\r\n+            </td>\r\n+        </tr>\r\n+    </table>\r\n+\r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637002686325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n \r\n </div>\r\n \r\n <div class=\"container\">\r\n-    <h1>Diarios Municipio</h1>\r\n+    <h1>Diarios por Municipio</h1>\r\n \r\n     <table>\r\n         <tr>\r\n             <td>\r\n"
+                },
+                {
+                    "date": 1637002697279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n \r\n     <table>\r\n         <tr>\r\n             <td>\r\n-                <p-chart type=\"bar\" [data]=\"basicData\" [options]=\"basicOptions\"></p-chart>\r\n+                <p-chart type=\"bar\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n \r\n"
+                },
+                {
+                    "date": 1637002744809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n \r\n     <table>\r\n         <tr>\r\n             <td>\r\n-                <p-chart type=\"bar\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n+                <p-chart type=\"line\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n \r\n"
+                },
+                {
+                    "date": 1637003050112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n \r\n     <table>\r\n         <tr>\r\n             <td>\r\n-                <p-chart type=\"line\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n+                <p-chart type=\"bar\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n \r\n"
+                },
+                {
+                    "date": 1637003055464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n \r\n     <table>\r\n         <tr>\r\n             <td>\r\n-                <p-chart type=\"bar\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n+                <p-chart type=\"v\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n \r\n"
+                },
+                {
+                    "date": 1637003301907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,10 +88,17 @@\n \r\n     <table>\r\n         <tr>\r\n             <td>\r\n-                <p-chart type=\"v\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n+                <p-chart type=\"line\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n-\r\n+    <table>\r\n+        <tr>\r\n+            <td>\r\n+                <p-chart type=\"doughnut\" [data]=\"dataMunicipio\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n+                </p-chart>\r\n+            </td>\r\n+        </tr>\r\n+    </table>\r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637003504951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,7 +98,10 @@\n             <td>\r\n                 <p-chart type=\"doughnut\" [data]=\"dataMunicipio\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n                 </p-chart>\r\n             </td>\r\n+            <td>\r\n+                <p-chart type=\"bar\" [data]=\"basicDataMun\" [options]=\"basicOptions\"></p-chart>\r\n+            </td>\r\n         </tr>\r\n     </table>\r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637003553225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,8 +92,10 @@\n                 <p-chart type=\"line\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n+    <h1>Total por Municipio</h1>\r\n+\r\n     <table>\r\n         <tr>\r\n             <td>\r\n                 <p-chart type=\"doughnut\" [data]=\"dataMunicipio\" [options]=\"chartOptions\" [style]=\"{'width': '40%'}\">\r\n"
+                },
+                {
+                    "date": 1637003565453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,8 +83,9 @@\n \r\n </div>\r\n \r\n <div class=\"container\">\r\n+    <br>\r\n     <h1>Diarios por Municipio</h1>\r\n \r\n     <table>\r\n         <tr>\r\n@@ -92,8 +93,9 @@\n                 <p-chart type=\"line\" [data]=\"municipioData\" [options]=\"basicOptions\"></p-chart>\r\n             </td>\r\n         </tr>\r\n     </table>\r\n+    <br>\r\n     <h1>Total por Municipio</h1>\r\n \r\n     <table>\r\n         <tr>\r\n"
+                }
+            ],
+            "date": 1636997832292,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

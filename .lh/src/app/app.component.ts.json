@@ -1,0 +1,186 @@
+{
+    "sourceFile": "src/app/app.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 42,
+            "patches": [
+                {
+                    "date": 1636997824108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1636998182304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Component } from '@angular/core';\n+import { MenuItem } from 'primeng/api';\n \n @Component({\n   selector: 'app-root',\n   templateUrl: './app.component.html',\n@@ -9,6 +10,20 @@\n     \"../../node_modules/primeicons/primeicons.css\"\n   ]\n })\n export class AppComponent {\n-  title = 'covidU';\n+\n+  private items!: MenuItem[];\n+\n+  ngOnInit() {\n+    this.items = [\n+      { label: 'Categories' },\n+      { label: 'Sports' },\n+      { label: 'Football' },\n+      { label: 'Countries' },\n+      { label: 'Spain' },\n+      { label: 'F.C. Barcelona' },\n+      { label: 'Squad' },\n+      { label: 'Lionel Messi', url: 'https://en.wikipedia.org/wiki/Lionel_Messi' }\n+    ];\n+  }\n }\n"
+                },
+                {
+                    "date": 1636998188275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   ]\n })\n export class AppComponent {\n \n-  private items!: MenuItem[];\n+  items!: MenuItem[];\n \n   ngOnInit() {\n     this.items = [\n       { label: 'Categories' },\n"
+                },
+                {
+                    "date": 1636998312138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,9 @@\n \n @Component({\n   selector: 'app-root',\n   templateUrl: './app.component.html',\n-  styleUrls: ['./app.component.scss',\n-    \"../../node_modules/primeng/resources/themes/saga-blue/theme.css\",\n-    \"../../node_modules/primeng/resources/primeng.min.css\",\n-    \"../../node_modules/primeicons/primeicons.css\"\n+  styleUrls: ['./app.component.scss'\n   ]\n })\n export class AppComponent {\n \n"
+                },
+                {
+                    "date": 1636999666135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,11 @@\n import { Component } from '@angular/core';\n-import { MenuItem } from 'primeng/api';\n \n @Component({\n   selector: 'app-root',\n   templateUrl: './app.component.html',\n-  styleUrls: ['./app.component.scss'\n-  ]\n+  styleUrls: ['./app.component.scss']\n })\n export class AppComponent {\n \n-  items!: MenuItem[];\n \n-  ngOnInit() {\n-    this.items = [\n-      { label: 'Categories' },\n-      { label: 'Sports' },\n-      { label: 'Football' },\n-      { label: 'Countries' },\n-      { label: 'Spain' },\n-      { label: 'F.C. Barcelona' },\n-      { label: 'Squad' },\n-      { label: 'Lionel Messi', url: 'https://en.wikipedia.org/wiki/Lionel_Messi' }\n-    ];\n-  }\n }\n"
+                },
+                {
+                    "date": 1637000275022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,17 @@\n import { Component } from '@angular/core';\n+import { Subscription } from 'rxjs/internal/Subscription';\n \n @Component({\n   selector: 'app-root',\n   templateUrl: './app.component.html',\n   styleUrls: ['./app.component.scss']\n })\n export class AppComponent {\n \n+  data: any;\n+  chartOptions: any;\n+  subscription!: Subscription;\n+  //config: AppConfig;\n \n+\n }\n"
+                },
+                {
+                    "date": 1637000305726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,26 @@\n   chartOptions: any;\n   subscription!: Subscription;\n   //config: AppConfig;\n \n+  ngOnInit() {\n+    this.data = {\n+      labels: ['A', 'B', 'C'],\n+      datasets: [\n+        {\n+          data: [300, 50, 100],\n+          backgroundColor: [\n+            \"#FF6384\",\n+            \"#36A2EB\",\n+            \"#FFCE56\"\n+          ],\n+          hoverBackgroundColor: [\n+            \"#FF6384\",\n+            \"#36A2EB\",\n+            \"#FFCE56\"\n+          ]\n+        }\n+      ]\n+    };\n \n-}\n+\n+  }\n"
+                },
+                {
+                    "date": 1637000316823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,7 @@\n           ]\n         }\n       ]\n     };\n+  }\n \n-\n-  }\n+}\n"
+                },
+                {
+                    "date": 1637001083751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Component } from '@angular/core';\n import { Subscription } from 'rxjs/internal/Subscription';\n+import { GlobalDataService } from './service/global-data.service';\n \n @Component({\n   selector: 'app-root',\n   templateUrl: './app.component.html',\n@@ -12,8 +13,12 @@\n   chartOptions: any;\n   subscription!: Subscription;\n   //config: AppConfig;\n \n+  constructor(private globalDataService: GlobalDataService) {\n+\n+  }\n+\n   ngOnInit() {\n     this.data = {\n       labels: ['A', 'B', 'C'],\n       datasets: [\n@@ -33,5 +38,7 @@\n       ]\n     };\n   }\n \n+\n+\n }\n"
+                },
+                {
+                    "date": 1637001137785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,7 +38,11 @@\n       ]\n     };\n   }\n \n+  private getGlobalData() {\n+    this.globalDataService.getInfo().subscribe((data: any) => {\n+      console.log(data);\n+    })\n+  }\n \n-\n }\n"
+                },
+                {
+                    "date": 1637001145511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n \n   }\n \n   ngOnInit() {\n+    this.getGlobalData();\n     this.data = {\n       labels: ['A', 'B', 'C'],\n       datasets: [\n         {\n"
+                },
+                {
+                    "date": 1637001356795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \n   ngOnInit() {\n     this.getGlobalData();\n     this.data = {\n-      labels: ['A', 'B', 'C'],\n+      labels: ['Confirmados', 'Muertos', 'Recuperados'],\n       datasets: [\n         {\n           data: [300, 50, 100],\n           backgroundColor: [\n"
+                },
+                {
+                    "date": 1637001408914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,16 +25,16 @@\n       datasets: [\n         {\n           data: [300, 50, 100],\n           backgroundColor: [\n-            \"#FF6384\",\n-            \"#36A2EB\",\n-            \"#FFCE56\"\n+            \"#4EA641\",\n+            \"#D9042B\",\n+            \"#F29F05\"\n           ],\n           hoverBackgroundColor: [\n-            \"#FF6384\",\n-            \"#36A2EB\",\n-            \"#FFCE56\"\n+            \"#4EA641\",\n+            \"#D9042B\",\n+            \"#F29F05\"\n           ]\n         }\n       ]\n     };\n"
+                },
+                {
+                    "date": 1637001456216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,31 +19,31 @@\n   }\n \n   ngOnInit() {\n     this.getGlobalData();\n-    this.data = {\n-      labels: ['Confirmados', 'Muertos', 'Recuperados'],\n-      datasets: [\n-        {\n-          data: [300, 50, 100],\n-          backgroundColor: [\n-            \"#4EA641\",\n-            \"#D9042B\",\n-            \"#F29F05\"\n-          ],\n-          hoverBackgroundColor: [\n-            \"#4EA641\",\n-            \"#D9042B\",\n-            \"#F29F05\"\n-          ]\n-        }\n-      ]\n-    };\n   }\n \n   private getGlobalData() {\n     this.globalDataService.getInfo().subscribe((data: any) => {\n       console.log(data);\n+      this.data = {\n+        labels: ['Confirmados', 'Muertos', 'Recuperados'],\n+        datasets: [\n+          {\n+            data: [300, 50, 100],\n+            backgroundColor: [\n+              \"#4EA641\",\n+              \"#D9042B\",\n+              \"#F29F05\"\n+            ],\n+            hoverBackgroundColor: [\n+              \"#4EA641\",\n+              \"#D9042B\",\n+              \"#F29F05\"\n+            ]\n+          }\n+        ]\n+      };\n     })\n   }\n \n }\n"
+                },
+                {
+                    "date": 1637001933550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       this.data = {\n         labels: ['Confirmados', 'Muertos', 'Recuperados'],\n         datasets: [\n           {\n-            data: [300, 50, 100],\n+            data: [data.Global.TotalConfirmed, data.Global.TotalDeaths, data.Global.TotalRecovered],\n             backgroundColor: [\n               \"#4EA641\",\n               \"#D9042B\",\n               \"#F29F05\"\n"
+                },
+                {
+                    "date": 1637002105565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n   data: any;\n   chartOptions: any;\n   subscription!: Subscription;\n   //config: AppConfig;\n+  basicData: any;\n+  basicOptions: any;\n \n   constructor(private globalDataService: GlobalDataService) {\n \n   }\n"
+                },
+                {
+                    "date": 1637002130902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,28 @@\n   }\n \n   ngOnInit() {\n     this.getGlobalData();\n+    this.basicData = {\n+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n+      datasets: [\n+        {\n+          label: 'First Dataset',\n+          data: [65, 59, 80, 81, 56, 55, 40],\n+          fill: false,\n+          borderColor: '#42A5F5',\n+          tension: .4\n+        },\n+        {\n+          label: 'Second Dataset',\n+          data: [28, 48, 40, 19, 86, 27, 90],\n+          fill: false,\n+          borderColor: '#FFA726',\n+          tension: .4\n+        }\n+      ]\n+    };\n+\n   }\n \n   private getGlobalData() {\n     this.globalDataService.getInfo().subscribe((data: any) => {\n"
+                },
+                {
+                    "date": 1637002262249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,20 +25,16 @@\n     this.basicData = {\n       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n       datasets: [\n         {\n-          label: 'First Dataset',\n-          data: [65, 59, 80, 81, 56, 55, 40],\n-          fill: false,\n-          borderColor: '#42A5F5',\n-          tension: .4\n+          label: 'My First dataset',\n+          backgroundColor: '#42A5F5',\n+          data: [65, 59, 80, 81, 56, 55, 40]\n         },\n         {\n-          label: 'Second Dataset',\n-          data: [28, 48, 40, 19, 86, 27, 90],\n-          fill: false,\n-          borderColor: '#FFA726',\n-          tension: .4\n+          label: 'My Second dataset',\n+          backgroundColor: '#FFA726',\n+          data: [28, 48, 40, 19, 86, 27, 90]\n         }\n       ]\n     };\n \n"
+                },
+                {
+                    "date": 1637002328661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,29 +21,35 @@\n   }\n \n   ngOnInit() {\n     this.getGlobalData();\n-    this.basicData = {\n-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n-      datasets: [\n-        {\n-          label: 'My First dataset',\n-          backgroundColor: '#42A5F5',\n-          data: [65, 59, 80, 81, 56, 55, 40]\n-        },\n-        {\n-          label: 'My Second dataset',\n-          backgroundColor: '#FFA726',\n-          data: [28, 48, 40, 19, 86, 27, 90]\n-        }\n-      ]\n-    };\n \n+\n   }\n \n   private getGlobalData() {\n     this.globalDataService.getInfo().subscribe((data: any) => {\n       console.log(data);\n+      this.basicData = {\n+        labels: ['Global'],\n+        datasets: [\n+          {\n+            label: 'Total Confirmados',\n+            backgroundColor: '#4EA641',\n+            data: [data.Global.TotalConfirmed]\n+          },\n+          {\n+            label: 'Total Muertos',\n+            backgroundColor: '#D9042B',\n+            data: [data.Global.TotalDeaths]\n+          },\n+          {\n+            label: 'Total Recuperados',\n+            backgroundColor: '#F29F05',\n+            data: [data.Global.TotalRecovered]\n+          }\n+        ]\n+      };\n       this.data = {\n         labels: ['Confirmados', 'Muertos', 'Recuperados'],\n         datasets: [\n           {\n"
+                },
+                {
+                    "date": 1637002616878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,5 +69,11 @@\n       };\n     })\n   }\n \n+  getMunicipio() {\n+    this.globalDataService.getSpecific('05002').subscribe((data: any) => {\n+\n+    })\n+  }\n+\n }\n"
+                },
+                {
+                    "date": 1637002628839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,10 +21,10 @@\n   }\n \n   ngOnInit() {\n     this.getGlobalData();\n+    this.getMunicipio()\n \n-\n   }\n \n   private getGlobalData() {\n     this.globalDataService.getInfo().subscribe((data: any) => {\n@@ -71,9 +71,9 @@\n   }\n \n   getMunicipio() {\n     this.globalDataService.getSpecific('05002').subscribe((data: any) => {\n-\n+      console.log(data)\n     })\n   }\n \n }\n"
+                },
+                {
+                    "date": 1637002706448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n   subscription!: Subscription;\n   //config: AppConfig;\n   basicData: any;\n   basicOptions: any;\n+  municipioData: any;\n \n+\n   constructor(private globalDataService: GlobalDataService) {\n \n   }\n \n"
+                },
+                {
+                    "date": 1637002761923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,8 +74,27 @@\n \n   getMunicipio() {\n     this.globalDataService.getSpecific('05002').subscribe((data: any) => {\n       console.log(data)\n+      this.municipioData = {\n+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n+        datasets: [\n+          {\n+            label: 'First Dataset',\n+            data: [65, 59, 80, 81, 56, 55, 40],\n+            fill: false,\n+            borderColor: '#42A5F5',\n+            tension: .4\n+          },\n+          {\n+            label: 'Second Dataset',\n+            data: [28, 48, 40, 19, 86, 27, 90],\n+            fill: false,\n+            borderColor: '#FFA726',\n+            tension: .4\n+          }\n+        ]\n+      };\n     })\n   }\n \n }\n"
+                },
+                {
+                    "date": 1637002795801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,11 @@\n   }\n \n   getMunicipio() {\n     this.globalDataService.getSpecific('05002').subscribe((data: any) => {\n-      console.log(data)\n+      data.map((datos: any) => {\n+        console.log(datos)\n+      })\n       this.municipioData = {\n         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n         datasets: [\n           {\n"
+                },
+                {
+                    "date": 1637002836451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,8 +73,12 @@\n   }\n \n   getMunicipio() {\n     this.globalDataService.getSpecific('05002').subscribe((data: any) => {\n+      var fechas = [];\n+      var casos = [];\n+      var fallecidos = [];\n+      var recuperados = [];\n       data.map((datos: any) => {\n         console.log(datos)\n       })\n       this.municipioData = {\n"
+                },
+                {
+                    "date": 1637002873307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,10 +77,15 @@\n       var fechas = [];\n       var casos = [];\n       var fallecidos = [];\n       var recuperados = [];\n+\n       data.map((datos: any) => {\n-        console.log(datos)\n+        fechas.push(datos.fecha_diagnostico);\n+        casos.push(datos.fecha_diagnostico);\n+        fallecidos.push(datos.fecha_diagnostico);\n+        recuperados.push(datos.fecha_diagnostico);\n+\n       })\n       this.municipioData = {\n         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n         datasets: [\n"
+                },
+                {
+                    "date": 1637002881586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,11 +80,11 @@\n       var recuperados = [];\n \n       data.map((datos: any) => {\n         fechas.push(datos.fecha_diagnostico);\n-        casos.push(datos.fecha_diagnostico);\n-        fallecidos.push(datos.fecha_diagnostico);\n-        recuperados.push(datos.fecha_diagnostico);\n+        casos.push(datos.casos);\n+        fallecidos.push(datos.fallecidos);\n+        recuperados.push(datos.recuperados);\n \n       })\n       this.municipioData = {\n         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n"
+                },
+                {
+                    "date": 1637002959965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,12 +73,12 @@\n   }\n \n   getMunicipio() {\n     this.globalDataService.getSpecific('05002').subscribe((data: any) => {\n-      var fechas = [];\n-      var casos = [];\n-      var fallecidos = [];\n-      var recuperados = [];\n+      var fechas: any = [];\n+      var casos: any = [];\n+      var fallecidos: any = [];\n+      var recuperados: any = [];\n \n       data.map((datos: any) => {\n         fechas.push(datos.fecha_diagnostico);\n         casos.push(datos.casos);\n@@ -86,23 +86,30 @@\n         recuperados.push(datos.recuperados);\n \n       })\n       this.municipioData = {\n-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n+        labels: fechas,\n         datasets: [\n           {\n-            label: 'First Dataset',\n-            data: [65, 59, 80, 81, 56, 55, 40],\n+            label: 'Casos',\n+            data: casos,\n             fill: false,\n             borderColor: '#42A5F5',\n             tension: .4\n           },\n           {\n-            label: 'Second Dataset',\n-            data: [28, 48, 40, 19, 86, 27, 90],\n+            label: 'Fallecidos',\n+            data: fallecidos,\n             fill: false,\n             borderColor: '#FFA726',\n             tension: .4\n+          },\n+          {\n+            label: 'Recuperados',\n+            data: recuperados,\n+            fill: false,\n+            borderColor: '#FF5526',\n+            tension: .4\n           }\n         ]\n       };\n     })\n"
+                },
+                {
+                    "date": 1637002971164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n             label: 'Recuperados',\n             data: recuperados,\n             fill: false,\n             borderColor: '#FF5526',\n-            tension: .4\n+            tension: .96\n           }\n         ]\n       };\n     })\n"
+                },
+                {
+                    "date": 1637003041636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,27 +89,21 @@\n       this.municipioData = {\n         labels: fechas,\n         datasets: [\n           {\n-            label: 'Casos',\n-            data: casos,\n-            fill: false,\n-            borderColor: '#42A5F5',\n-            tension: .4\n+            label: 'Total Confirmados',\n+            backgroundColor: '#4EA641',\n+            data: casos\n           },\n           {\n-            label: 'Fallecidos',\n-            data: fallecidos,\n-            fill: false,\n-            borderColor: '#FFA726',\n-            tension: .4\n+            label: 'Total Muertos',\n+            backgroundColor: '#D9042B',\n+            data: fallecidos\n           },\n           {\n-            label: 'Recuperados',\n-            data: recuperados,\n-            fill: false,\n-            borderColor: '#FF5526',\n-            tension: .96\n+            label: 'Total Recuperados',\n+            backgroundColor: '#F29F05',\n+            data: recuperados\n           }\n         ]\n       };\n     })\n"
+                },
+                {
+                    "date": 1637003216153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,14 +77,17 @@\n       var fechas: any = [];\n       var casos: any = [];\n       var fallecidos: any = [];\n       var recuperados: any = [];\n-\n+      var totalDatos: any = {};\n       data.map((datos: any) => {\n         fechas.push(datos.fecha_diagnostico);\n         casos.push(datos.casos);\n         fallecidos.push(datos.fallecidos);\n         recuperados.push(datos.recuperados);\n+        totalDatos.casos = totalDatos.casos + datos.casos;\n+        totalDatos.fallecidos = totalDatos.fallecidos + datos.fallecidos;\n+        totalDatos.recuperados = totalDatos.recuperados + datos.recuperados;\n \n       })\n       this.municipioData = {\n         labels: fechas,\n@@ -105,8 +108,27 @@\n             data: recuperados\n           }\n         ]\n       };\n+\n+      this.data = {\n+        labels: ['Confirmados', 'Muertos', 'Recuperados'],\n+        datasets: [\n+          {\n+            data: [data.Global.TotalConfirmed, data.Global.TotalDeaths, data.Global.TotalRecovered],\n+            backgroundColor: [\n+              \"#4EA641\",\n+              \"#D9042B\",\n+              \"#F29F05\"\n+            ],\n+            hoverBackgroundColor: [\n+              \"#4EA641\",\n+              \"#D9042B\",\n+              \"#F29F05\"\n+            ]\n+          }\n+        ]\n+      };\n     })\n   }\n \n }\n"
+                },
+                {
+                    "date": 1637003268366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,36 +86,37 @@\n         recuperados.push(datos.recuperados);\n         totalDatos.casos = totalDatos.casos + datos.casos;\n         totalDatos.fallecidos = totalDatos.fallecidos + datos.fallecidos;\n         totalDatos.recuperados = totalDatos.recuperados + datos.recuperados;\n-\n       })\n       this.municipioData = {\n         labels: fechas,\n         datasets: [\n           {\n-            label: 'Total Confirmados',\n+            label: 'Total diario Confirmados',\n             backgroundColor: '#4EA641',\n             data: casos\n           },\n           {\n-            label: 'Total Muertos',\n+            label: 'Total diario Muertos',\n             backgroundColor: '#D9042B',\n             data: fallecidos\n           },\n           {\n-            label: 'Total Recuperados',\n+            label: 'Total diario Recuperados',\n             backgroundColor: '#F29F05',\n             data: recuperados\n           }\n         ]\n       };\n \n       this.data = {\n-        labels: ['Confirmados', 'Muertos', 'Recuperados'],\n+        labels: ['Total Confirmados', 'Total Muertos', 'Total Recuperados'],\n         datasets: [\n           {\n-            data: [data.Global.TotalConfirmed, data.Global.TotalDeaths, data.Global.TotalRecovered],\n+            data: [totalDatos.casos,\n+            totalDatos.fallecidos,\n+            totalDatos.recuperados,],\n             backgroundColor: [\n               \"#4EA641\",\n               \"#D9042B\",\n               \"#F29F05\"\n"
+                },
+                {
+                    "date": 1637003284651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n   //config: AppConfig;\n   basicData: any;\n   basicOptions: any;\n   municipioData: any;\n+  dataMunicipio: any;\n \n-\n   constructor(private globalDataService: GlobalDataService) {\n \n   }\n \n@@ -108,9 +108,9 @@\n           }\n         ]\n       };\n \n-      this.data = {\n+      this.dataMunicipio = {\n         labels: ['Total Confirmados', 'Total Muertos', 'Total Recuperados'],\n         datasets: [\n           {\n             data: [totalDatos.casos,\n"
+                },
+                {
+                    "date": 1637003353880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,11 +83,11 @@\n         fechas.push(datos.fecha_diagnostico);\n         casos.push(datos.casos);\n         fallecidos.push(datos.fallecidos);\n         recuperados.push(datos.recuperados);\n-        totalDatos.casos = totalDatos.casos + datos.casos;\n-        totalDatos.fallecidos = totalDatos.fallecidos + datos.fallecidos;\n-        totalDatos.recuperados = totalDatos.recuperados + datos.recuperados;\n+        totalDatos.casos = totalDatos.casos + parseInt(datos.casos);\n+        totalDatos.fallecidos = totalDatos.fallecidos + parseInt(datos.fallecidos);\n+        totalDatos.recuperados = totalDatos.recuperados + parseInt(datos.recuperados);\n       })\n       this.municipioData = {\n         labels: fechas,\n         datasets: [\n"
+                },
+                {
+                    "date": 1637003369017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,8 +87,9 @@\n         totalDatos.casos = totalDatos.casos + parseInt(datos.casos);\n         totalDatos.fallecidos = totalDatos.fallecidos + parseInt(datos.fallecidos);\n         totalDatos.recuperados = totalDatos.recuperados + parseInt(datos.recuperados);\n       })\n+      console.log(totalDatos);\n       this.municipioData = {\n         labels: fechas,\n         datasets: [\n           {\n"
+                },
+                {
+                    "date": 1637003383699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,11 +83,11 @@\n         fechas.push(datos.fecha_diagnostico);\n         casos.push(datos.casos);\n         fallecidos.push(datos.fallecidos);\n         recuperados.push(datos.recuperados);\n-        totalDatos.casos = totalDatos.casos + parseInt(datos.casos);\n-        totalDatos.fallecidos = totalDatos.fallecidos + parseInt(datos.fallecidos);\n-        totalDatos.recuperados = totalDatos.recuperados + parseInt(datos.recuperados);\n+        totalDatos.casos = parseInt(datos.casos);\n+        totalDatos.fallecidos = parseInt(datos.fallecidos);\n+        totalDatos.recuperados = parseInt(datos.recuperados);\n       })\n       console.log(totalDatos);\n       this.municipioData = {\n         labels: fechas,\n"
+                },
+                {
+                    "date": 1637003402390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,17 +77,17 @@\n       var fechas: any = [];\n       var casos: any = [];\n       var fallecidos: any = [];\n       var recuperados: any = [];\n-      var totalDatos: any = {};\n+      var totalDatos: any = { casos: 0, fallecidos: 0, recuperados: 0 };\n       data.map((datos: any) => {\n         fechas.push(datos.fecha_diagnostico);\n         casos.push(datos.casos);\n         fallecidos.push(datos.fallecidos);\n         recuperados.push(datos.recuperados);\n-        totalDatos.casos = parseInt(datos.casos);\n-        totalDatos.fallecidos = parseInt(datos.fallecidos);\n-        totalDatos.recuperados = parseInt(datos.recuperados);\n+        totalDatos.casos = totalDatos.casos + parseInt(datos.casos);\n+        totalDatos.fallecidos = totalDatos.fallecidos + parseInt(datos.fallecidos);\n+        totalDatos.recuperados = totalDatos.recuperados + parseInt(datos.recuperados);\n       })\n       console.log(totalDatos);\n       this.municipioData = {\n         labels: fechas,\n"
+                },
+                {
+                    "date": 1637003457589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n   basicData: any;\n   basicOptions: any;\n   municipioData: any;\n   dataMunicipio: any;\n+  basicDataMun: any;\n \n   constructor(private globalDataService: GlobalDataService) {\n \n   }\n@@ -109,8 +110,28 @@\n           }\n         ]\n       };\n \n+      this.basicDataMun = {\n+        labels: ['Global'],\n+        datasets: [\n+          {\n+            label: 'Total Confirmados',\n+            backgroundColor: '#4EA641',\n+            data: [data.Global.TotalConfirmed]\n+          },\n+          {\n+            label: 'Total Muertos',\n+            backgroundColor: '#D9042B',\n+            data: [data.Global.TotalDeaths]\n+          },\n+          {\n+            label: 'Total Recuperados',\n+            backgroundColor: '#F29F05',\n+            data: [data.Global.TotalRecovered]\n+          }\n+        ]\n+      };\n       this.dataMunicipio = {\n         labels: ['Total Confirmados', 'Total Muertos', 'Total Recuperados'],\n         datasets: [\n           {\n"
+                },
+                {
+                    "date": 1637003490319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -116,19 +116,19 @@\n         datasets: [\n           {\n             label: 'Total Confirmados',\n             backgroundColor: '#4EA641',\n-            data: [data.Global.TotalConfirmed]\n+            data: totalDatos.casos\n           },\n           {\n             label: 'Total Muertos',\n             backgroundColor: '#D9042B',\n-            data: [data.Global.TotalDeaths]\n+            data: totalDatos.fallecidos\n           },\n           {\n             label: 'Total Recuperados',\n             backgroundColor: '#F29F05',\n-            data: [data.Global.TotalRecovered]\n+            data: totalDatos.recuperados\n           }\n         ]\n       };\n       this.dataMunicipio = {\n"
+                },
+                {
+                    "date": 1637003534927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -116,19 +116,19 @@\n         datasets: [\n           {\n             label: 'Total Confirmados',\n             backgroundColor: '#4EA641',\n-            data: totalDatos.casos\n+            data: [totalDatos.casos]\n           },\n           {\n             label: 'Total Muertos',\n             backgroundColor: '#D9042B',\n-            data: totalDatos.fallecidos\n+            data: [totalDatos.fallecidos]\n           },\n           {\n             label: 'Total Recuperados',\n             backgroundColor: '#F29F05',\n-            data: totalDatos.recuperados\n+            data: [totalDatos.recuperados]\n           }\n         ]\n       };\n       this.dataMunicipio = {\n"
+                },
+                {
+                    "date": 1637003545577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,9 +111,9 @@\n         ]\n       };\n \n       this.basicDataMun = {\n-        labels: ['Global'],\n+        labels: ['Total'],\n         datasets: [\n           {\n             label: 'Total Confirmados',\n             backgroundColor: '#4EA641',\n"
+                },
+                {
+                    "date": 1637003657940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,18 +127,24 @@\n           {\n             label: 'Total Recuperados',\n             backgroundColor: '#F29F05',\n             data: [totalDatos.recuperados]\n+          },\n+          {\n+            label: 'Total Activos',\n+            backgroundColor: '#F29F05',\n+            data: [(totalDatos.casos - totalDatos.fallecidos - totalDatos.recuperados)]\n           }\n         ]\n       };\n       this.dataMunicipio = {\n-        labels: ['Total Confirmados', 'Total Muertos', 'Total Recuperados'],\n+        labels: ['Total Confirmados', 'Total Muertos', 'Total Recuperados', 'Total Activos'],\n         datasets: [\n           {\n             data: [totalDatos.casos,\n             totalDatos.fallecidos,\n-            totalDatos.recuperados,],\n+            totalDatos.recuperados,\n+            (totalDatos.casos - totalDatos.fallecidos - totalDatos.recuperados)],\n             backgroundColor: [\n               \"#4EA641\",\n               \"#D9042B\",\n               \"#F29F05\"\n"
+                },
+                {
+                    "date": 1637003698260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,9 +130,9 @@\n             data: [totalDatos.recuperados]\n           },\n           {\n             label: 'Total Activos',\n-            backgroundColor: '#F29F05',\n+            backgroundColor: '#10ABEA',\n             data: [(totalDatos.casos - totalDatos.fallecidos - totalDatos.recuperados)]\n           }\n         ]\n       };\n@@ -146,14 +146,17 @@\n             (totalDatos.casos - totalDatos.fallecidos - totalDatos.recuperados)],\n             backgroundColor: [\n               \"#4EA641\",\n               \"#D9042B\",\n-              \"#F29F05\"\n+              \"#F29F05\",\n+              \"#10ABEA\"\n+\n             ],\n             hoverBackgroundColor: [\n               \"#4EA641\",\n               \"#D9042B\",\n-              \"#F29F05\"\n+              \"#F29F05\",\n+              \"#10ABEA\"\n             ]\n           }\n         ]\n       };\n"
+                }
+            ],
+            "date": 1636997824108,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss',\n    \"../../node_modules/primeng/resources/themes/saga-blue/theme.css\",\n    \"../../node_modules/primeng/resources/primeng.min.css\",\n    \"../../node_modules/primeicons/primeicons.css\"\n  ]\n})\nexport class AppComponent {\n  title = 'covidU';\n}\n"
+        }
+    ]
+}

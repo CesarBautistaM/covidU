@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { ChartModule } from 'primeng/chart';
+import { SplitterModule } from 'primeng/splitter';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,7 +14,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BreadcrumbModule,
+    ChartModule,
+    SplitterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

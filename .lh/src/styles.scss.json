@@ -1,0 +1,82 @@
+{
+    "sourceFile": "src/styles.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1636999863899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1636999905948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n /* You can add global styles to this file, and also import other style files */\n-* {\n+*:not(pi) {\n     font-family: \"Roboto\", sans-serif !important;\n }\n"
+                },
+                {
+                    "date": 1636999937636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n /* You can add global styles to this file, and also import other style files */\n-*:not(pi) {\n+*:not(.pi) {\n     font-family: \"Roboto\", sans-serif !important;\n }\n+body {\n+    background-color: var(--surface-ground);\n+}\n"
+                },
+                {
+                    "date": 1637000567383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,4 +4,26 @@\n }\n body {\n     background-color: var(--surface-ground);\n }\n+\n+.container {\n+    padding-right: 15px;\n+    padding-left: 15px;\n+    margin-right: auto;\n+    margin-left: auto;\n+}\n+@media (min-width: 768px) {\n+    .container {\n+        width: 750px;\n+    }\n+}\n+@media (min-width: 992px) {\n+    .container {\n+        width: 970px;\n+    }\n+}\n+@media (min-width: 1200px) {\n+    .container {\n+        width: 1170px;\n+    }\n+}\n"
+                },
+                {
+                    "date": 1637000592953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n     background-color: var(--surface-ground);\n }\n \n .container {\n-    padding-right: 15px;\n-    padding-left: 15px;\n+    padding-right: 100px;\n+    padding-left: 100px;\n     margin-right: auto;\n     margin-left: auto;\n }\n @media (min-width: 768px) {\n"
+                },
+                {
+                    "date": 1637000604591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n     background-color: var(--surface-ground);\n }\n \n .container {\n-    padding-right: 100px;\n-    padding-left: 100px;\n+    padding-right: 250px;\n+    padding-left: 250px;\n     margin-right: auto;\n     margin-left: auto;\n }\n @media (min-width: 768px) {\n"
+                },
+                {
+                    "date": 1637000619734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,19 +11,4 @@\n     padding-left: 250px;\n     margin-right: auto;\n     margin-left: auto;\n }\n-@media (min-width: 768px) {\n-    .container {\n-        width: 750px;\n-    }\n-}\n-@media (min-width: 992px) {\n-    .container {\n-        width: 970px;\n-    }\n-}\n-@media (min-width: 1200px) {\n-    .container {\n-        width: 1170px;\n-    }\n-}\n"
+                },
+                {
+                    "date": 1637000641512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,4 +11,19 @@\n     padding-left: 250px;\n     margin-right: auto;\n     margin-left: auto;\n }\n+@media (min-width: 768px) {\n+    .container {\n+        width: 750px;\n+    }\n+}\n+@media (min-width: 992px) {\n+    .container {\n+        width: 970px;\n+    }\n+}\n+@media (min-width: 1200px) {\n+    .container {\n+        width: 1170px;\n+    }\n+}\n"
+                },
+                {
+                    "date": 1637000648833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,18 +11,9 @@\n     padding-left: 250px;\n     margin-right: auto;\n     margin-left: auto;\n }\n-@media (min-width: 768px) {\n-    .container {\n-        width: 750px;\n-    }\n-}\n-@media (min-width: 992px) {\n-    .container {\n-        width: 970px;\n-    }\n-}\n+\n @media (min-width: 1200px) {\n     .container {\n         width: 1170px;\n     }\n"
+                },
+                {
+                    "date": 1637001674337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,4 @@\n     padding-left: 250px;\n     margin-right: auto;\n     margin-left: auto;\n }\n-\n-@media (min-width: 1200px) {\n-    .container {\n-        width: 1170px;\n-    }\n-}\n"
+                },
+                {
+                    "date": 1637001687460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,4 +11,10 @@\n     padding-left: 250px;\n     margin-right: auto;\n     margin-left: auto;\n }\n+\n+@media (min-width: 1200px) {\n+    .container {\n+        width: 1170px;\n+    }\n+}\n"
+                },
+                {
+                    "date": 1637001747894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n     background-color: var(--surface-ground);\n }\n \n .container {\n-    padding-right: 250px;\n-    padding-left: 250px;\n+    padding-right: 100px;\n+    padding-left: 100px;\n     margin-right: auto;\n     margin-left: auto;\n }\n \n"
+                },
+                {
+                    "date": 1637001811904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,11 @@\n     padding-right: 100px;\n     padding-left: 100px;\n     margin-right: auto;\n     margin-left: auto;\n+    table {\n+        width: 100%;\n+    }\n }\n \n @media (min-width: 1200px) {\n     .container {\n"
+                },
+                {
+                    "date": 1637001825687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,12 @@\n     margin-right: auto;\n     margin-left: auto;\n     table {\n         width: 100%;\n+        td {\n+            width: 50%;\n+            max-width: 50%;\n+        }\n     }\n }\n \n @media (min-width: 1200px) {\n"
+                },
+                {
+                    "date": 1637002045961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,12 @@\n     padding-right: 100px;\n     padding-left: 100px;\n     margin-right: auto;\n     margin-left: auto;\n+    h1{\n+        text-align-last: center;\n+    }\n+    }\n     table {\n         width: 100%;\n         td {\n             width: 50%;\n"
+                },
+                {
+                    "date": 1637003108122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,11 @@\n     padding-right: 100px;\n     padding-left: 100px;\n     margin-right: auto;\n     margin-left: auto;\n-    h1{\n+    h1 {\n         text-align-last: center;\n     }\n-    }\n     table {\n         width: 100%;\n         td {\n             width: 50%;\n@@ -28,4 +27,10 @@\n     .container {\n         width: 1170px;\n     }\n }\n+\n+@media (min-width: 5000px) {\n+    .container {\n+        width: 100%;\n+    }\n+}\n"
+                },
+                {
+                    "date": 1637003120702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,10 +27,4 @@\n     .container {\n         width: 1170px;\n     }\n }\n-\n-@media (min-width: 5000px) {\n-    .container {\n-        width: 100%;\n-    }\n-}\n"
+                }
+            ],
+            "date": 1636999863899,
+            "name": "Commit-0",
+            "content": "/* You can add global styles to this file, and also import other style files */\n* {\n    font-family: \"Roboto\", sans-serif !important;\n}\n"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+*:not(.pi) {
+    font-family: "Roboto", sans-serif !important;
+}
+body {
+    background-color: var(--surface-ground);
+}
+
+.container {
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    h1 {
+        text-align-last: center;
+    }
+    table {
+        width: 100%;
+        td {
+            width: 50%;
+            max-width: 50%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
